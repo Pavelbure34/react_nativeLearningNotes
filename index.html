@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>React Native Lecture Notes</title>
+        <script src="js/jquery_3.3.1.js"></script>
+        <script src="js/index.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <div id="topContainer">
+            <div id="nameTitle">
+                <h1>React Native Lecture Note Pages</h1>
+                <a href="https://facebook.github.io/react-native/docs/tutorial">Link to React-Native Website</a>
+            </div>
+
+            <div class="clearBoth"></div>
+
+            <div id="divideBox">
+                <div id="contentsList" class="floatLeft">
+                    <nav>
+                        <ul>
+                            <caption>React Native Lecture Notes</caption>
+                            <li><a href="javascript:App.Notes.Day01()">day01-Why React-Native?</a></li>
+                            <li><a href="javascript:App.Notes.Day02()">day02-Components and index.js</a></li>
+                            <li><a href="javascript:App.Notes.Day03()">day03-Application Outline</a></li>
+                            <li><a href="javascript:App.Notes.Day04()">day04-Style your App</a></li>
+                            <li><a href="javascript:App.Notes.Day05()">day05-FlexBox and More Styling</a></li>
+                            <li><a href="javascript:App.Notes.Day06()">day06-elment and UI</a></li>
+                            <li><a href="javascript:App.Notes.Day07()">day07-List and Class based Component</a></li>
+                            <li><a href="javascript:App.Notes.Day08()">day08-Life cycle method and data fetch</a></li>
+                            <li><a href="javascript:App.Notes.Day09()">day09-Updating comp and advanced Usage</a></li>
+                            <li><a href="javascript:App.Notes.Day10()">day10-Making scrollable</a></li>
+                            <li><a href="javascript:App.Notes.Day11()">day11-Button and User Input</a></li>
+                            <li><a href="javascript:App.Notes.Day12()">day12-Linkin Between Apps</a></li>
+                            <li><a href="javascript:App.Notes.Day13()">day13-Setting up Firebase</a></li>
+                            <li><a href="javascript:App.Notes.Day14()">day14-How to handle regular user input</a></li>
+                            <li><a href="javascript:App.Notes.Day15()">day15-How to handle password input</a></li>
+                            <li><a href="javascript:App.Notes.Day16()">day16-How to validate user input and error handling</a></li>
+                            <li><a href="javascript:App.Notes.Day17()">day17-Conditional rendoring</a></li>
+                            <li><a href="javascript:App.Notes.Day18()">day18-Handling Authentication event</a></li>
+                            <li><a href="javascript:App.Notes.Day19()">day19-Introduction to Redux</a></li>
+                            <li><a href="javascript:App.Game.init()">Game for break!</a></li>
+                        </ul>
+                    </nav> 
+                </div>
+                <article id="contentView" class="floatLeft">
+
+                    <h2>day19-Introduction to Redux</h2>
+                    <div>
+                        Now state is only local to the class we create.<br>
+                        However if the state is global to every component in the app?<br>
+                        That is why we use <span class="emphasisBlue">Redux</span><br>
+                    </div>
+                    <article>
+                        <div style="margin-left:auto;margin-right:auto;padding-bottom:10px;width:50%;padding-top:10px;">
+                            <img
+                                src="./img/day18/Redux_Img1.png"
+                                style="width:400px;height:200px;"
+                            >
+                            <br><sub class="imgSub">
+                                How redux works
+                            </sub>
+                        </div>
+                        <div>
+                            In order to make it verbally easier to understand..
+                            <ul>
+                                <li class="interval5">action
+                                    <blockquote>
+                                        a plain javascript object that tells reducer what to do
+                                        <ul>
+                                            <li>It must have
+                                                <span class="emphasisBlue">type</span>
+                                                Property.
+                                            </li>
+                                        </ul>
+                                    </blockquote>
+                                </li>
+                                <li class="interval5">reducer
+                                    <blockquote>
+                                        a function that creates some amount of code or data.
+                                    </blockquote></li>
+                                <li class="interval5">state
+                                    <blockquote>
+                                        an application data.
+                                    </blockquote></li>
+                                <li class="interval5">store
+                                    <blockquote>
+                                        storage for states and reducers.
+                                    </blockquote></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                </article>
+            </div>
+            <div class="clearBoth"></div>
+
+            <div id="copyRight">
+                <span>Developed By CP Software&trade;.</span><br>
+                Make sure turn on <span class="emphasisBlue">GenyMotion</span>.
+            </div>
+        </div>
+        
+    </body>
+</html>

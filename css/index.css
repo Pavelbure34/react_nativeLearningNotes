@@ -1,0 +1,116 @@
+body{
+    background-image: url("../img/pattern.jpg");
+    font-family: Helvetica;
+    font-size: 20px;
+}
+
+nav ul li{
+    font-size:15px;
+    margin-bottom:8px;
+}
+
+ul li{
+    margin-bottom:3px;
+}
+
+ol li{
+    margin-bottom:3px;
+}
+
+blockquote div{
+    margin-left:20px;
+}
+
+.emphasisBlue{
+    font-weight: bold;
+    color:blue;
+}
+
+.emphasisRed{
+    font-weight: bolder;
+    color:red;
+    font-style:italic;
+}
+
+.clearBoth{
+    clear:both;
+}
+
+.floatLeft{
+    float:left;
+}
+
+.imgSub{
+    margin-left:15px;
+    font-style: italic;
+}
+
+.interval5{
+    margin-bottom:5px;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.indented{
+    margin-left:5px;
+}
+
+#topContainer{
+    background-color: azure;
+    border-left:2px solid azure;
+    border-right:2px solid azure;
+    margin-left:100px;
+    border-radius: 25px;
+    width:1300px;
+}
+
+#nameTitle{
+    height:190px;
+    border-bottom:2px solid seashell;
+}
+
+#nameTitle h1{
+    text-align: center;
+    padding-top:50px;
+    font-family: 'Lucida Sans';
+}
+
+#divideBox{
+    height:800px;
+}
+
+#contentsList{
+    width:300px;
+    border-right:2px solid seashell;
+    overflow: auto;
+    height:800px;
+}
+
+#contentsList nav ul{
+    list-style-type: none;
+    caption-side: top;
+}
+
+#contentsList nav ul caption{
+    font-size:15px;
+}
+
+#contentsView{
+    width:1500px;
+    overflow-y: auto;
+    height:800px;
+    overflow-x:auto;
+}
+
+#copyRight{
+    border-top:2px solid seashell;
+    height:100px;
+}
+
+#copyRight span{
+    margin-left:450px;
+    font-size: 25px;
+    margin-bottom:10px;
+}
