@@ -5,7 +5,6 @@ $(document).ready(
 );
 
 var App = {
-    randNums:[],
     contents:{
         d01:
             '<h2>Day01-Why React Native?</h2>\
@@ -1471,6 +1470,77 @@ var App = {
                 </article>\
             </div>',
         d19:
+            '<h2>day19-Introduction to Redux</h2>\
+            <div>\
+                Now state is only local to the class we create.<br>\
+                However if the state is global to every component in the app?<br>\
+                That is why we use <span class="emphasisBlue">Redux</span><br>\
+            </div>\
+            <article>\
+                <div style="margin-left:auto;margin-right:auto;padding-bottom:10px;width:50%;padding-top:10px;">\
+                    <img\
+                        src="./img/day18/Redux_Img1.png"\
+                        style="width:400px;height:200px;"\
+                    >\
+                    <br><sub class="imgSub">\
+                        How redux works\
+                    </sub>\
+                </div>\
+                <div>\
+                    In order to make it verbally easier to understand..\
+                    <ul>\
+                        <li class="interval5">action\
+                            <blockquote>\
+                                a plain javascript object that tells reducer what to do\
+                                <ul>\
+                                    <li>It must have\
+                                        <span class="emphasisBlue">type</span>\
+                                        Property.\
+                                    </li>\
+                                    <li>it is always string.</li>\
+                                    <li>its whole purpose is to tell what to do.</li>\
+                                </ul>\
+                            </blockquote>\
+                        </li>\
+                        <li class="interval5">reducer\
+                            <blockquote>\
+                                a function that creates some amount of code or data.\
+                                <ul>\
+                                    <li>It takes two parameter.\
+                                        <span class="emphasisBlue">state and action</span>.</li>\
+                                </ul>\
+                            </blockquote></li>\
+                        <li class="interval5">state\
+                            <blockquote>\
+                                an application data.\
+                            </blockquote></li>\
+                        <li class="interval5">store\
+                            <blockquote>\
+                                storage for states and reducers.\
+                            </blockquote></li>\
+                    </ul>\
+                </div>\
+            </article>',
+        d20:
+            '<h2>day20-good Redux conventions</h2>\
+            <div>\
+                There are some must rule for redux.\
+            </div>\
+            <article>\
+                <ul>\
+                    <caption>Don&rsquo;t&rsquo;s</caption>\
+                    <li>Do not change state in Redux directly.</li>\
+                </ul>\
+                <ul>\
+                    <caption>Do&rsquo;s</caption>\
+                    <li>Return a new state.</li>\
+                </ul>\
+                <ul>\
+                    <caption>Reason</caption>\
+                    <li></li>\
+                </ul>\
+            </article>',
+        d21:
             ''
     },
     Notes:{
@@ -1641,6 +1711,12 @@ var App = {
         },
         Day19:()=>{
             $("#contentView").html(App.contents.d19);
+        },
+        Day20:()=>{
+            $("#contentView").html(App.contents.d20);
+        },
+        Day21:()=>{
+            $("#contentView").html(App.contents.d21);
         }
     }
 };

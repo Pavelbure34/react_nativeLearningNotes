@@ -39,6 +39,8 @@
                             <li><a href="javascript:App.Notes.Day17()">day17-Conditional rendoring</a></li>
                             <li><a href="javascript:App.Notes.Day18()">day18-Handling Authentication event</a></li>
                             <li><a href="javascript:App.Notes.Day19()">day19-Introduction to Redux</a></li>
+                            <li><a href="javascript:App.Notes.Day20()">day20-good Redux conventions</a></li>
+                            <li><a href="javascript:App.Notes.Day21()">day21-Actual Redux practice in App</a></li>
                             <li><a href="javascript:App.Game.init()">Game for break!</a></li>
                         </ul>
                     </nav> 
@@ -72,12 +74,18 @@
                                                 <span class="emphasisBlue">type</span>
                                                 Property.
                                             </li>
+                                            <li>it is always string.</li>
+                                            <li>its whole purpose is to tell what to do.</li>
                                         </ul>
                                     </blockquote>
                                 </li>
                                 <li class="interval5">reducer
                                     <blockquote>
                                         a function that creates some amount of code or data.
+                                        <ul>
+                                            <li>It takes two parameter.
+                                                <span class="emphasisBlue">state and action</span>.</li>
+                                        </ul>
                                     </blockquote></li>
                                 <li class="interval5">state
                                     <blockquote>
@@ -90,6 +98,37 @@
                             </ul>
                         </div>
                     </article>
+
+                    <h2>day20-good Redux conventions</h2>
+                    <div>
+                        There are some must rule for redux.
+                    </div>
+                    <article>
+                        <ul>
+                            <caption>Don&rsquo;t&rsquo;s</caption>
+                            <li>Do not change state in Redux directly.</li>
+                        </ul>
+                        <ul>
+                            <caption>Do&rsquo;s</caption>
+                            <li>Return a new state.</li>
+                        </ul>
+                        <ul>
+                            <caption>Reason</caption>
+                            <li></li>
+                        </ul>
+                    </article>
+
+                    <h2>day21-Actual Redux practice in App</h2>
+                    <div>
+                        Short word in quick.
+                        <ol>
+                            <li>install Redux within the project directory.
+                                <blockquote>
+                                    npm install --save redux react-redux
+                                </blockquote>
+                            </li>
+                        </ol>
+                    </div>
 
                 </article>
             </div>
