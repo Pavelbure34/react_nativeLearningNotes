@@ -1541,6 +1541,130 @@ var App = {
                 </ul>\
             </article>',
         d21:
+            '<h2>day21-Actual Redux practice in App</h2>\
+            <div>\
+                Short word in quick.\
+                <ol>\
+                    <li class="interval5">install <span class="emphasisBlue">Redux</span>\
+                         within the project directory.\
+                        <blockquote>\
+                            npm install --save redux react-redux\
+                        </blockquote>\
+                    </li>\
+                    <li class="interval5">import two component from\
+                         <span class="emphasisBlue">reduct and react-redux</span>\
+                         in your App.js.\
+                         <blockquote>\
+                             Provider from react-redux and createStore from redux.\
+                         </blockquote>\
+                    </li>\
+                    <li class="interval5">create  \
+                        <span class="emphasisBlue">reducers and actions</span>\
+                        files to put into the store within its directories.\
+                    </li>\
+                    <li class="interval5">create'  
+                        +'<span class="emphasisBlue">index.js</span>\
+                        within reducers directory.\
+                    </li>\
+                    <li class="interval5">design  \
+                        <span class="emphasisBlue">reducers and following states</span>.\
+                    </li>\
+                    <li class="interval5">pull state generated from reducers   \
+                        <span class="emphasisBlue">Within the state you choose</span>.\
+                    </li>\
+                </ol>\
+            </div>\
+            <div>\
+                <div id="imgBox" class="centerImg">\
+                    <img\
+                        style="width:400px;height:400px;"\
+                    ><br><sub class="imgSub">\
+                    \
+                    </sub>\
+                    <div>\
+                        <div class="clearBoth"></div>\
+                        <button id="prevBtn" class="imgBtn">Previous</button>\
+                        <button id="nxtBtn" class="imgBtn">Next</button>\
+                        <div class="clearBoth"></div>\
+                    </div>\
+                </div>\
+            </div>\
+            <div>\
+                <ul>\
+                    <li class="interval5">\
+                        <span class="emphasisRed">react-redux</span>:library helping\
+                        <span class="emphasisBlue">connnect</span> react and redux.\
+                    </li>\
+                    <li class="interval5">\
+                        <span class="emphasisRed">combineReducers</span>: redux component that\
+                        <span class="emphasisBlue">help</span> multiple reducers work together.\
+                    </li>\
+                    <li class="interval5">\
+                        <span class="emphasisRed">Provider</span> can only include'+ 
+                        '<span class="emphasisBlue">single</span> child component.\
+                        <div class="indented">\
+                            Make use of <span class="emphasisBlue">View</span>\
+                             Tag to wrap multiple components.\
+                        </div>\
+                    </li>\
+                    <li class="interval5">\
+                        <span class="emphasisRed">Collect</span> all the reducers in'+ 
+                        '<span class="emphasisBlue">one file</span>.\
+                    </li>\
+                    <li class="interval5">\
+                        In terms of <span class="emphasisRed">reducer design</span>\
+                        <div class="indented">\
+                            <ul>\
+                                <caption>Types of reducers</caption>\
+                                <li class="interval5">Library Reducer\
+                                    <div class="indented">\
+                                        If dealing with list of items, use this type.\
+                                    </div>\
+                                </li>\
+                                <li class="interval5">Selector Reducer\
+                                    <div class="indented">\
+                                        If wanna keep track of picked item, use this type.\
+                                    </div>\
+                                </li>\
+                            </ul>\
+                        </div>\
+                    </li>\
+                    <li class="interval5">\
+                        <h4>How to pull state from store within class based component</h4>\
+                        <div style="padding-top:5px;padding-bottom:5px;margin-left:20px;">\
+                            <img\
+                                src="img/day20/connect.png"\
+                                style="width:400px;height:400px;"\
+                            >\
+                            <br><sub class="imgSub">\
+                                How Connect function helps.\
+                            </sub>\
+                        </div>\
+                        <div>\
+                            You need <span class="emphasisRed">Connect</span>,\
+                             a <span class="emphasisBlue">helper function<br>\
+                                  in React-Redux library</span>\
+                              that lets <span class="emphasisRed">component</span> pulls state from<br>\
+                              <span class="emphasisBlue">reducers</span>.\
+                            <ul>\
+                                <li class="interval5">\
+                                    use <span class="emphasisRed">connect()(Component_name)</span>\
+                                     in <span class="emphasisBlue">export statement</span>.\
+                                </li>\
+                                <li class="interval5">\
+                                    In the first argument, write function.\
+                                </li>\
+                                <li class="interval5">\
+                                    <span class="emphasisBlue">The state returned from the first argument</span>\
+                                     becomes<br>\
+                                    the <span class="emphasisBlue">props</span>.\
+                                </li>\
+                            </ul>\
+                        </div>\
+                    </li>\
+                </ul>\
+            </div>',
+        d22:
             ''
     },
     Notes:{
@@ -1716,7 +1840,39 @@ var App = {
             $("#contentView").html(App.contents.d20);
         },
         Day21:()=>{
+            let photos = [
+                './img/day20/importProvider_wrap.png',
+                './img/day20/index_js_in_reducers.png',
+                './img/day20/reducerInStore.png',
+                './img/day20/stateToProps.png',
+                './img/day20/reducerWorking.png'
+            ];
+            let subText = [
+                'Provder from react-redux class',
+                'combineReducer',
+                'reducer in store',
+                'connecting component to redux',
+                'reducer returning state as props'
+            ];
+            let index = 0;
             $("#contentView").html(App.contents.d21);
+            $("#imgBox img").attr("src",photos[index]);
+            $("#imgBox sub").html(subText[index]);
+            $("#prevBtn").click(()=>{
+                if (index >= 1)
+                    index--;
+                $("#imgBox img").attr("src",photos[index]);
+                $("#imgBox sub").html(subText[index]);
+            });
+            $("#nxtBtn").click(()=>{
+                if (index < 4)
+                    index++;
+                $("#imgBox img").attr("src",photos[index]);
+                $("#imgBox sub").html(subText[index]);
+            })
+        },
+        Day22:()=>{
+            $("#contentView").html(App.contents.d22);
         }
     }
 };
