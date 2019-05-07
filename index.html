@@ -108,6 +108,10 @@
                             <li class="interval5">
                                 <span class="emphasisRed">Provider</span> can only include 
                                 <span class="emphasisBlue">single</span> child component.
+                                <div class="indented">
+                                    Make use of <span class="emphasisBlue">View</span>
+                                     Tag to wrap multiple components.
+                                </div>
                             </li>
                             <li class="interval5">
                                 <span class="emphasisRed">Collect</span> all the reducers in  
@@ -116,23 +120,38 @@
                             <li class="interval5">
                                 In terms of <span class="emphasisRed">reducer design</span>
                                 <div class="indented">
-                                    <dl>
+                                    <ul>
                                         <caption>Types of reducers</caption>
-                                        <dt class="indented">Library Reducer</dt>
-                                        <dd class="indented">
-                                            If dealing with list of items, use this type.
-                                        </dd>
-                                        <dt class="indented">Selector Reducer</dt>
-                                        <dd class="indented">
-                                            If wanna keep track of picked item, use this type.
-                                        </dd>
-                                    </dl>
+                                        <li class="interval5">Library Reducer
+                                            <div class="indented">
+                                                If dealing with list of items, use this type.
+                                            </div>
+                                        </li>
+                                        <li class="interval5">Selector Reducer
+                                            <div class="indented">
+                                                If wanna keep track of picked item, use this type.
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </li>
                             <li class="interval5">
                                 <h4>How to pull state from store within class based component</h4>
                                 <div>
-
+                                    You need <span class="emphasisRed">Connect</span>,
+                                     a <span class="emphasisBlue">helper function<br>
+                                          in React-Redux library</span>
+                                      that lets <span class="emphasisRed">component</span> pulls state from<br>
+                                      <span class="emphasisBlue">reducers</span>.
+                                    <ul>
+                                        <li class="interval5">
+                                            use <span class="emphasisRed">connect()(Component_name)</span>
+                                             in <span class="emphasisBlue">export statement</span>.
+                                        </li>
+                                        <li class="interval5">
+                                            In the first argument, write function.
+                                        </li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
