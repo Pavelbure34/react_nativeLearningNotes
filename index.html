@@ -44,73 +44,38 @@
                             <li><a href="javascript:Notes.Day20()">day20-good Redux conventions</a></li>
                             <li><a href="javascript:Notes.Day21()">day21-Actual Redux practice in App</a></li>
                             <li><a href="javascript:Notes.Day22()">day22-better list view</a></li>
+                            <li><a href="javascript:Notes.Day23()">day23-action creator and library</a></li>
+                            <li><a href="javascript:Notes.Day24()">day24-</a></li>
                         </ul>
                     </nav> 
                 </div>
                 <article id="contentView" class="floatLeft">
-
-                    <h2>day22-better list view.</h2>
-                    <div>
-                        map view has to show every item and its details all at once.<br>
-                        Therefore it is very inappropriate for showing a large list.<br>
-                        It is not only waste of phone memory but also a lot of pressure to phone CPU.<br>
-                        However using list view, you can selectively show only what is on the visible range.<br>
-                        For this time,we will going to use <span class="emphasisRed">FlatList</span>.
-                    </div>
-                    <div>
-                        We need to fill out three properties for FlatList component.
-                        <div class="clearBoth"></div>
-                        <div class="floatLeft">
-                            <img
-                                src="./img/day21/listview.png"
-                                style="width:300px;height:300px;"
-                                alt="listView Properties"
-                            ><br><sub class="imgSub">
-                                ListView Properties
-                            </sub>
-                        </div>
-                        <article class="floatLeft">
-                            <ul>
-                                <li class="interval5">
-                                    <span class="emphasisBlue">data</span>
-                                    <div class="indented">
-                                        input data for flat list.
-                                    </div>
-                                </li>
-                                <li class="interval5">
-                                    <span class="emphasisBlue">renderItem</span>
-                                    <div class="indented">
-                                        it determines how single data<br>
-                                        is going to be rendered
-                                    </div>
-                                </li>
-                                <li class="interval5">
-                                    <span class="emphasisBlue">keyExtractor</span>
-                                    <div class="indented">
-                                        just like key element in<br>
-                                        map list, this also has key.
-                                    </div>
-                                </li>
-                            </ul>
-                        </article>
-                        <div class="clearBoth"></div>
-                    </div>
-                    <div>
-                        <ul>
-                            <caption>ListView has some advantages over map view.</caption>
-                            <li class="interval5">It has
-                                 <span class="emphasisBlue">scrollView</span>
-                                 <span class="emphasisRed"> by default</span>.
-                            </li>
-                            <li class="interval5">
-                                
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>How to set up selection reducer and enable click on single item</h4>
-
-                    </div>
+                    <h2 class="leftText">day23-action creator and library</h2>  
+                    <ol>
+                        <caption>
+                            if you want to use actions from action creator in flatList,<br>
+                            you gotta wire up actions into your application...
+                        </caption>
+                        <li>Create pure javascript function that returns js object<br>
+                            that would work as action creator and action respectively.
+                            <div id="img1"></div>
+                        </li>
+                        <li>Go to <emphB t="t">the component</emphB> where you
+                             <emphB t="t">want to use actions</emphB></li>
+                        <li>Import the action creators into that component.</li>
+                        <li>Import <emphR t="t">connect</emphR> helper function
+                             from <emphB t="t">react-redux library</emphB>.
+                             <div class="indented">
+                                connect function can also help
+                                 <emphB t="t">wire actions</emphB> into your application.
+                             </div>
+                             <div id="img2"></div>
+                        </li>
+                        <li>
+                            wire the action to the component with connect function.
+                            <div id="img3"></div>
+                        </li>
+                    </ol>
 
                 </article>
             </div>

@@ -10,11 +10,11 @@ nav ul li{
 }
 
 ul li{
-    margin-bottom:3px;
+    margin-bottom:5px;
 }
 
 ol li{
-    margin-bottom:3px;
+    margin-bottom:5px;
 }
 
 blockquote div{
@@ -47,6 +47,18 @@ emphR{
     width:50%;
     padding-top:10px;
     padding-bottom:10px;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.leftText{
+    text-align: left;
+}
+
+.rightText{
+    text-align: right;
 }
 
 .emphasisBlue{

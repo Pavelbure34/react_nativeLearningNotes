@@ -1658,5 +1658,62 @@ const pages = {
             </ul>\
         </div>',
     d22:
-        ''
+        '<h2>day22-better list view.</h2>\
+        <div>\
+            map view has to show every item and its details all at once.<br>\
+            Therefore it is very inappropriate for showing a large list.<br>\
+            It is not only waste of phone memory but also a lot of pressure to phone CPU.<br>\
+            However using list view, you can selectively show only what is on the visible range.<br>\
+            For this time,we will going to use <span class="emphasisRed">FlatList</span>.\
+        </div>\
+        <div>\
+            We need to fill out three properties for FlatList component.\
+            <div class="clearBoth"></div>\
+            <div class="floatLeft">\
+                <img\
+                    src="./img/day21/listview.png"\
+                    style="width:300px;height:300px;"\
+                    alt="listView Properties"\
+                ><br><sub class="imgSub">\
+                    ListView Properties\
+                </sub>\
+            </div>\
+            <article class="floatLeft">\
+                <ul>\
+                    <li class="interval5">\
+                        <span class="emphasisBlue">data</span>\
+                        <div class="indented">\
+                            input data for flat list.\
+                        </div>\
+                    </li>\
+                    <li class="interval5">\
+                        <span class="emphasisBlue">renderItem</span>\
+                        <div class="indented">\
+                            it determines how single data<br>\
+                            is going to be rendered\
+                        </div>\
+                    </li>\
+                    <li class="interval5">\
+                        <span class="emphasisBlue">keyExtractor</span>\
+                        <div class="indented">\
+                            just like key element in<br>\
+                            map list, this also has key.\
+                        </div>\
+                    </li>\
+                </ul>\
+            </article>\
+            <div class="clearBoth"></div>\
+        </div>\
+        <div>\
+            <ul>\
+                <caption>ListView has some advantages over map view.</caption>\
+                <li class="interval5">It has\
+                     <span class="emphasisBlue">scrollView</span>\
+                     <span class="emphasisRed"> by default</span>.\
+                </li>\
+                <li class="interval5">\
+                    It does not have to show everything on the single page.'+    
+                '</li>\
+            </ul>\
+        </div>'
 };
