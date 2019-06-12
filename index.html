@@ -3,6 +3,8 @@
     <head>
         <title>React Native Lecture Notes</title>
         <script src="js/jquery_3.3.1.js"></script>
+        <script src="js/pages.js"></script>
+        <script src="js/funcs.js"></script>
         <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/index.css">
     </head>
@@ -20,29 +22,28 @@
                     <nav>
                         <ul>
                             <caption>React Native Lecture Notes</caption>
-                            <li><a href="javascript:App.Notes.Day01()">day01-Why React-Native?</a></li>
-                            <li><a href="javascript:App.Notes.Day02()">day02-Components and index.js</a></li>
-                            <li><a href="javascript:App.Notes.Day03()">day03-Application Outline</a></li>
-                            <li><a href="javascript:App.Notes.Day04()">day04-Style your App</a></li>
-                            <li><a href="javascript:App.Notes.Day05()">day05-FlexBox and More Styling</a></li>
-                            <li><a href="javascript:App.Notes.Day06()">day06-elment and UI</a></li>
-                            <li><a href="javascript:App.Notes.Day07()">day07-List and Class based Component</a></li>
-                            <li><a href="javascript:App.Notes.Day08()">day08-Life cycle method and data fetch</a></li>
-                            <li><a href="javascript:App.Notes.Day09()">day09-Updating comp and advanced Usage</a></li>
-                            <li><a href="javascript:App.Notes.Day10()">day10-Making scrollable</a></li>
-                            <li><a href="javascript:App.Notes.Day11()">day11-Button and User Input</a></li>
-                            <li><a href="javascript:App.Notes.Day12()">day12-Linkin Between Apps</a></li>
-                            <li><a href="javascript:App.Notes.Day13()">day13-Setting up Firebase</a></li>
-                            <li><a href="javascript:App.Notes.Day14()">day14-How to handle regular user input</a></li>
-                            <li><a href="javascript:App.Notes.Day15()">day15-How to handle password input</a></li>
-                            <li><a href="javascript:App.Notes.Day16()">day16-How to validate user input and error handling</a></li>
-                            <li><a href="javascript:App.Notes.Day17()">day17-Conditional rendoring</a></li>
-                            <li><a href="javascript:App.Notes.Day18()">day18-Handling Authentication event</a></li>
-                            <li><a href="javascript:App.Notes.Day19()">day19-Introduction to Redux</a></li>
-                            <li><a href="javascript:App.Notes.Day20()">day20-good Redux conventions</a></li>
-                            <li><a href="javascript:App.Notes.Day21()">day21-Actual Redux practice in App</a></li>
-                            <li><a href="javascript:App.Notes.Day22()">day22-better list view</a></li>
-                            <li><a href="javascript:App.Game.init()">Game for break!</a></li>
+                            <li><a href="javascript:Notes.Day01()">day01-Why React-Native?</a></li>
+                            <li><a href="javascript:Notes.Day02()">day02-Components and index.js</a></li>
+                            <li><a href="javascript:Notes.Day03()">day03-Application Outline</a></li>
+                            <li><a href="javascript:Notes.Day04()">day04-Style your App</a></li>
+                            <li><a href="javascript:Notes.Day05()">day05-FlexBox and More Styling</a></li>
+                            <li><a href="javascript:Notes.Day06()">day06-elment and UI</a></li>
+                            <li><a href="javascript:Notes.Day07()">day07-List and Class based Component</a></li>
+                            <li><a href="javascript:Notes.Day08()">day08-Life cycle method and data fetch</a></li>
+                            <li><a href="javascript:Notes.Day09()">day09-Updating comp and advanced Usage</a></li>
+                            <li><a href="javascript:Notes.Day10()">day10-Making scrollable</a></li>
+                            <li><a href="javascript:Notes.Day11()">day11-Button and User Input</a></li>
+                            <li><a href="javascript:Notes.Day12()">day12-Linkin Between Apps</a></li>
+                            <li><a href="javascript:Notes.Day13()">day13-Setting up Firebase</a></li>
+                            <li><a href="javascript:Notes.Day14()">day14-How to handle regular user input</a></li>
+                            <li><a href="javascript:Notes.Day15()">day15-How to handle password input</a></li>
+                            <li><a href="javascript:Notes.Day16()">day16-How to validate user input and error handling</a></li>
+                            <li><a href="javascript:Notes.Day17()">day17-Conditional rendoring</a></li>
+                            <li><a href="javascript:Notes.Day18()">day18-Handling Authentication event</a></li>
+                            <li><a href="javascript:Notes.Day19()">day19-Introduction to Redux</a></li>
+                            <li><a href="javascript:Notes.Day20()">day20-good Redux conventions</a></li>
+                            <li><a href="javascript:Notes.Day21()">day21-Actual Redux practice in App</a></li>
+                            <li><a href="javascript:Notes.Day22()">day22-better list view</a></li>
                         </ul>
                     </nav> 
                 </div>
@@ -54,6 +55,61 @@
                         Therefore it is very inappropriate for showing a large list.<br>
                         It is not only waste of phone memory but also a lot of pressure to phone CPU.<br>
                         However using list view, you can selectively show only what is on the visible range.<br>
+                        For this time,we will going to use <span class="emphasisRed">FlatList</span>.
+                    </div>
+                    <div>
+                        We need to fill out three properties for FlatList component.
+                        <div class="clearBoth"></div>
+                        <div class="floatLeft">
+                            <img
+                                src="./img/day21/listview.png"
+                                style="width:300px;height:300px;"
+                                alt="listView Properties"
+                            ><br><sub class="imgSub">
+                                ListView Properties
+                            </sub>
+                        </div>
+                        <article class="floatLeft">
+                            <ul>
+                                <li class="interval5">
+                                    <span class="emphasisBlue">data</span>
+                                    <div class="indented">
+                                        input data for flat list.
+                                    </div>
+                                </li>
+                                <li class="interval5">
+                                    <span class="emphasisBlue">renderItem</span>
+                                    <div class="indented">
+                                        it determines how single data<br>
+                                        is going to be rendered
+                                    </div>
+                                </li>
+                                <li class="interval5">
+                                    <span class="emphasisBlue">keyExtractor</span>
+                                    <div class="indented">
+                                        just like key element in<br>
+                                        map list, this also has key.
+                                    </div>
+                                </li>
+                            </ul>
+                        </article>
+                        <div class="clearBoth"></div>
+                    </div>
+                    <div>
+                        <ul>
+                            <caption>ListView has some advantages over map view.</caption>
+                            <li class="interval5">It has
+                                 <span class="emphasisBlue">scrollView</span>
+                                 <span class="emphasisRed"> by default</span>.
+                            </li>
+                            <li class="interval5">
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>How to set up selection reducer and enable click on single item</h4>
+
                     </div>
 
                 </article>
