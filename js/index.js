@@ -212,3 +212,4 @@ const Notes = {
         $("#contentView").html(pages.d22);
     }
 };
+
